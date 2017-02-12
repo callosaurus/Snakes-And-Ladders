@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         _currentSquare = 0;
+        _gameOver = NO;
         
         NSNumber *specialSquare1 = @4;
         NSNumber *specialSquare2 = @9;
@@ -66,7 +67,12 @@
     _currentSquare += roll;
     NSLog(@"Landed on square %lu!", (unsigned long)_currentSquare);
     
-//    check if player landed on special square
+    if (_currentSquare >= 100) {
+        _gameOver = NO;
+        NSLog(@"Game Over!");
+    }
+    
+//  check if player landed on special square
     
     //convert _currentSquare to NSNumber
     NSNumber *currentSquareAsANumber = [NSNumber numberWithInt:_currentSquare];
@@ -80,6 +86,13 @@
             NSNumber *newSquare = [_gameLogic objectForKey:matchedKey];
             _currentSquare = [newSquare integerValue];
             
+//            if(_currentSquare >= 100) {
+//                _currentSquare = 100;
+//            
+//            }
+            
+            newSquare = [NSNumber numberWithInt:_currentSquare];
+            
             if (newSquare > currentSquareAsANumber) {
                 NSLog(@"You landed on a ladder, and jumped to square %@!", newSquare);
                 return;
@@ -90,11 +103,8 @@
         }
     }
     
-//    BOOL specialCaseHappens = [_gameLogic doesContain:matchedKey];
-//    if(specialCaseHappens == YES){
-//        
-//        //fetch the value from the currentSquare key
-//        NSNumber *newSquare = [_gameLogic objectForKey:matchedKey];
+
+    
 }
 
 @end

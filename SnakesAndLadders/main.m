@@ -27,7 +27,11 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Please enter 'roll' or 'r'");
             }
             
+            if (newPlayer.gameOver == YES) {
+                return 0;
+            }
          
+            
         //End of while loop
         }
         
