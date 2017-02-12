@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F7E20211E5037EA00691AFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E20201E5037EA00691AFC /* main.m */; };
+		3F7E20291E503A5800691AFC /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E20281E503A5800691AFC /* InputHandler.m */; };
+		3F7E202C1E503AFF00691AFC /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E202B1E503AFF00691AFC /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		3F7E201D1E5037EA00691AFC /* SnakesAndLadders */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SnakesAndLadders; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7E20201E5037EA00691AFC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F7E20271E503A5800691AFC /* InputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		3F7E20281E503A5800691AFC /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		3F7E202A1E503AFF00691AFC /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		3F7E202B1E503AFF00691AFC /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				3F7E20201E5037EA00691AFC /* main.m */,
+				3F7E202A1E503AFF00691AFC /* Player.h */,
+				3F7E202B1E503AFF00691AFC /* Player.m */,
+				3F7E20271E503A5800691AFC /* InputHandler.h */,
+				3F7E20281E503A5800691AFC /* InputHandler.m */,
 			);
 			path = SnakesAndLadders;
 			sourceTree = "<group>";
@@ -120,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7E20211E5037EA00691AFC /* main.m in Sources */,
+				3F7E202C1E503AFF00691AFC /* Player.m in Sources */,
+				3F7E20291E503A5800691AFC /* InputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
