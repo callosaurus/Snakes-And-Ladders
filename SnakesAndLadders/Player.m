@@ -63,16 +63,18 @@
 -(void)roll
 {
     int roll = arc4random_uniform(6)+1;
-    NSLog(@"Rolled a %i!", roll);
+    NSLog(@"%@ rolled a %i!", self.name, roll);
     _currentSquare += roll;
-    NSLog(@"Landed on square %lu!", (unsigned long)_currentSquare);
+    NSLog(@"%@ landed on square %lu!",self.name, (unsigned long)_currentSquare);
     
-    if (_currentSquare >= 100) {
-        _gameOver = NO;
-        NSLog(@"Game Over!");
-    }
+//    if (_currentSquare >= 100) {
+//        _gameOver = NO;
+//        NSLog(@"Game Over!");
+//    }
     
-//  check if player landed on special square
+    
+    ////check if player landed on special square
+    
     
     //convert _currentSquare to NSNumber
     NSNumber *currentSquareAsANumber = [NSNumber numberWithInt:_currentSquare];
@@ -85,11 +87,6 @@
             NSNumber *matchedKey = currentSquareAsANumber;
             NSNumber *newSquare = [_gameLogic objectForKey:matchedKey];
             _currentSquare = [newSquare integerValue];
-            
-//            if(_currentSquare >= 100) {
-//                _currentSquare = 100;
-//            
-//            }
             
             newSquare = [NSNumber numberWithInt:_currentSquare];
             

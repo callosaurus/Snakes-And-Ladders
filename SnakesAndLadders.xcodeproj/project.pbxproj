@@ -10,6 +10,7 @@
 		3F7E20211E5037EA00691AFC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E20201E5037EA00691AFC /* main.m */; };
 		3F7E20291E503A5800691AFC /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E20281E503A5800691AFC /* InputHandler.m */; };
 		3F7E202C1E503AFF00691AFC /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E202B1E503AFF00691AFC /* Player.m */; };
+		3F7E202F1E5189FC00691AFC /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E202E1E5189FC00691AFC /* PlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		3F7E20281E503A5800691AFC /* InputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		3F7E202A1E503AFF00691AFC /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		3F7E202B1E503AFF00691AFC /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		3F7E202D1E5189FC00691AFC /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		3F7E202E1E5189FC00691AFC /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				3F7E20201E5037EA00691AFC /* main.m */,
+				3F7E202D1E5189FC00691AFC /* PlayerManager.h */,
+				3F7E202E1E5189FC00691AFC /* PlayerManager.m */,
 				3F7E202A1E503AFF00691AFC /* Player.h */,
 				3F7E202B1E503AFF00691AFC /* Player.m */,
 				3F7E20271E503A5800691AFC /* InputHandler.h */,
@@ -131,6 +136,7 @@
 			files = (
 				3F7E20211E5037EA00691AFC /* main.m in Sources */,
 				3F7E202C1E503AFF00691AFC /* Player.m in Sources */,
+				3F7E202F1E5189FC00691AFC /* PlayerManager.m in Sources */,
 				3F7E20291E503A5800691AFC /* InputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

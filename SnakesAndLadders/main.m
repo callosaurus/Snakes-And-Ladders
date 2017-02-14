@@ -9,28 +9,50 @@
 #import <Foundation/Foundation.h>
 #import "InputHandler.h"
 #import "Player.h"
+#import "PlayerManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        NSLog(@"Welcome to Snakes and Ladders! Type 'roll' or 'r' to roll the dice.");
         InputHandler *inputter = [InputHandler new];
-        Player *newPlayer = [Player new];
+        PlayerManager *playerManager = [PlayerManager new];
+        
+        BOOL start = NO;
+        
+        
+        while (start == NO) {
+            NSLog(@"Welcome to Snakes and Ladders! How many players?");
+            NSString *userInputNumberOfPlayers = [inputter getUserInput];
+           
+            //must input valid number of players
+            if ([userInputNumberOfPlayers intValue] > 0) {
+                [playerManager createPlayers:[userInputNumberOfPlayers intValue]];
+                start = YES;
+            } else {
+                NSLog(@"Please enter a numeric value greater than 0 :( \n.\n.\n.");
+            }
+            
+        }
+    
+        
         
         while (YES) {
             
-            
+            NSLog(@"Type 'roll' or 'r' to roll the dice, %@!", playerManager.currentPlayer.name);
             NSString *rollOrNot = [inputter getUserInput];
             if ([rollOrNot isEqualToString:@"roll"] || [rollOrNot isEqualToString:@"r"]) {
-                [newPlayer roll];
+                [playerManager playerManagerRoll];
             } else {
                 NSLog(@"Please enter 'roll' or 'r'");
             }
             
-            if (newPlayer.gameOver == YES) {
-                return 0;
+            //check if any player has won.
+            for (Player *player in playerManager.players) {
+                if (player.gameOver == YES) {
+                    NSLog(@"GAME OVER, %@ wins!", player.name);
+                    break;
+                }
             }
-         
             
         //End of while loop
         }

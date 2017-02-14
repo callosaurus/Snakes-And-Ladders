@@ -14,6 +14,7 @@
 @property NSDictionary *gameLogic;
 @property NSString *output;
 @property BOOL gameOver;
+@property NSString *name;
 
 -(void)roll;
 
